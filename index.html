@@ -1,0 +1,425 @@
+<!DOCTYPE html5>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primarybg: "#1F2732",
+              primarytxt: "#D1B06B",
+              dark: "#161D27",
+              gray: "#2E3947",
+              grayesh: "#3B434E",
+              light: "#D7D7D7",
+            },
+          },
+        },
+      };
+    </script>
+    <script type="text/javascript" src="/script.js"></script>
+
+    <title>Majd</title>
+  </head>
+  <body class="min-h-screen w-full bg-primarybg">
+    <main class="min-h-screen w-full m-auto relative">
+      <section class="w-full pt-4 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), #0000006e), url(/images/bg.png)">
+        <div class="flex justify-between items-center w-full">
+          <div class="flex justify-start items-center gap-3">
+            <img src="/icons/logo.svg" alt="law-icon" class="sm:w-24 w-12" />
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Attorney</h1>
+          </div>
+          <button class="primary-button">Book A Consultation</button>
+        </div>
+        <div class="flex justify-between items-center border border-t-1 border-b-1 border-r-0 border-l-0 border-[#4e555f] mt-4 py-8">
+          <div class="xl:flex hidden">
+            <div>
+              <nav id="navbar-default" role="navigation" class="hidden xl:flex items-center gap-12 text-xl font-normal">
+                <a href="#" class="hover:text-primarytxt transition-all">Home</a>
+                <a href="#about" class="hover:text-primarytxt transition-all">About Us</a>
+                <a href="#service" class="hover:text-primarytxt transition-all">Services</a>
+                <a href="#reviews" class="hover:text-primarytxt transition-all">Reviews</a>
+                <a href="#accomplishments" class="hover:text-primarytxt transition-all">Accomplishments</a>
+                <a href="#contact" class="hover:text-primarytxt transition-all">Contact Us</a>
+              </nav>
+            </div>
+          </div>
+          <div class="flex sm:m-0">
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+              <div class="flex gap-2 items-center">
+                <figure class="border border-2 border-primarytxt rounded-[50%] p-5 hidden xl:flex">
+                  <img
+                    src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fa74b17528776cc2288b92_header-call-icon.svg"
+                    loading="lazy"
+                    alt="Header Contact Icon"
+                  />
+                </figure>
+                <div class="flex flex-col items-center sm:items-start justify-center">
+                  <p class="text-primarytxt font-medium text-2xl sm:text-xl">Call Us On:</p>
+                  <a href="tel:911-987654321" class="text-2xl hover:text-primarytxt transition-all whitespace-nowrap">911-987654321</a>
+                </div>
+              </div>
+              <div class="flex gap-3 items-center">
+                <figure class="border border-2 border-primarytxt rounded-[50%] p-5 hidden xl:flex">
+                  <img
+                    src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fa74b16a6ce9cf010638ef_header-mail-icon.svg"
+                    loading="lazy"
+                    alt="Header Contact Icon"
+                  />
+                </figure>
+                <div class="flex flex-col items-center sm:items-start justify-center">
+                  <p class="text-primarytxt font-medium text-2xl sm:text-xl">Email Us On:</p>
+                  <a href="mailto:yourmail@mail.com" class="text-2xl hover:text-primarytxt transition-all">yourmail@mail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="xl:hidden flex w-full justify-end">
+            <div class="xl:hidden flex bg-primarytxt p-2 rounded-sm cursor-pointer">
+              <button onclick="toggleMenu()">
+                <figure>
+                  <img src="/icons/menu.svg" alt="menu" class="w-8" />
+                </figure>
+              </button>
+            </div>
+            <nav
+              id="mobile-nav"
+              role="navigation"
+              class="hidden absolute top-0 right-0 h-screen py-12 rounded-sm bg-primarybg w-screen flex-col justify-center items-center gap-12 text-xl font-normal menu"
+              aria-expanded="false"
+            >
+              <button onclick="toggleMenu()">
+                <figure class="w-8 absolute top-10 right-10"><img src="/icons/close.svg" alt="close" /></figure>
+              </button>
+              <a onclick="closeMenu()" href="#" class="hover:text-primarytxt transition-all">Home</a>
+              <a onclick="closeMenu()" href="#about" class="hover:text-primarytxt transition-all">About Us</a>
+              <a onclick="closeMenu()" href="#service" class="hover:text-primarytxt transition-all">Services</a>
+              <a onclick="closeMenu()" href="#reviews" class="hover:text-primarytxt transition-all">Reviews</a>
+              <a onclick="closeMenu()" href="#accomplishments" class="hover:text-primarytxt transition-all">Accomplishments</a>
+              <a onclick="closeMenu()" href="#contact" class="hover:text-primarytxt transition-all">Contact Us</a>
+            </nav>
+          </div>
+        </div>
+        <div class="flex items-center justify-center gap-6">
+          <div class="w-full flex flex-col gap-4 pt-24 pb-16">
+            <figure class="flex items-center justify-center md:justify-start">
+              <img src="/images/line1.svg" alt="line" class="md:flex hidden" />
+              <img src="/images/line4.svg" alt="line" class="md:hidden flex" />
+            </figure>
+            <h1 class="tracking-wider leading-relaxed">Were Group Of Certified Law Professionals</h1>
+            <p class="text-primarytxt leading-8 tracking-wide">
+              we have helped countless maritime workers and their families go up against the largest offshore companies and win.
+            </p>
+            <button class="button w-full sm:w-fit">Get in touch</button>
+          </div>
+          <figure class="w-[90%] lg:flex hidden"><img src="/images/lawyer.png" alt="lawyer-img" class="filter p-0 w-full object-contain" /></figure>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="flex items-center justify-center gap-8 flex-wrap flex-col xl:flex-row mb-14 pt-16">
+          <div class="flex flex-row xl:flex-col flex-[1] gap-4">
+            <figure><img src="/images/library.jpg" alt="library" class="rounded-sm" /></figure>
+            <figure><img src="/images/hammer.jpg" alt="hammer" class="rounded-sm" /></figure>
+          </div>
+          <div class="flex flex-col flex-[1.5]">
+            <h1 class="leading-normal pb-3">Welcome To Attorney Law - Lawyer & Law Firm Company</h1>
+            <figure class="m-auto sm:m-0">
+              <img src="/images/line1.svg" alt="line" class="mb-10 hidden sm:flex" />
+              <img src="/images/line4.svg" alt="line" class="mb-10 flex sm:hidden" />
+            </figure>
+            <p class="text-xl text-light leading-normal">
+              Although we are located in Brooklyn, our maritime lawyers are proud to help the injured throughout the nation, including workers who
+              were working in foreign waters at the time of the incident go up against the largest offshore companies and win.
+            </p>
+            <div class="flex justify-start lg:justify-between items-start flex-col">
+              <div
+                class="flex lg:justify-start justify-center items-center gap-3 mt-8 rounded-sm py-8 lg:py-0 bg-light lg:bg-transparent w-full lg:w-fit"
+              >
+                <figure>
+                  <img
+                    src="/images/lawyer1.png"
+                    alt="lawyer-img"
+                    class="rounded-[50%] bg-dark lg:bg-light w-20 h-20 object-cover border border-1 border-primarytxt"
+                  />
+                </figure>
+                <h2 class="font-semibold text-dark lg:text-white">John Doe</h2>
+              </div>
+              <div class="bg-primarytxt flex gap-4 w-full lg:w-fit py-8 px-12 items-center justify-center lg:justify-start rounded-sm mt-8">
+                <p class="text-3xl bg-dark p-4 font-bold w-fit rounded-lg">35+</p>
+                <p class="text-primarybg text-2xl">Years Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-dark" id="service">
+        <div>
+          <div class="flex flex-col md:flex-row justify-center w-full md:justify-between items-center pt-24">
+            <div class="w-full flex flex-col sm:justify-start sm:items-start justify-center items-center">
+              <h1 class="max-w-72 leading-snug w-full">Explore Our Services</h1>
+              <figure>
+                <img src="/images/line1.svg" alt="line" class="mt-2 sm:flex hidden" /><img
+                  src="/images/line4.svg"
+                  alt="line"
+                  class="mt-2 sm:hidden flex"
+                />
+              </figure>
+            </div>
+            <p class="text-xl text-light sm:mt-0 mt-6">
+              We are a group of civil litigation/trial attorneys who focus on providing a justice based on the issues relating to insurance defense,
+              insurance coverage, bad faith, insurance fraud and criminal litigation.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-16 pb-32">
+            <div class="card-container">
+              <h1 class="card-title">Business Law</h1>
+              <p class="card-p">Be aware of new developments, as laws and rules often change based on the situation.</p>
+              <hr class="card-hr" />
+              <div class="card-btn-container">
+                <figure><img src="/icons/business.svg" alt="" /></figure>
+                <button class="button-secondary">Book Now</button>
+              </div>
+            </div>
+            <div class="card-container">
+              <h1 class="card-title">Real Estate Law</h1>
+              <p class="card-p">Be aware of new developments, as laws and rules often change based on the situation.</p>
+              <hr class="card-hr" />
+              <div class="card-btn-container">
+                <figure><img src="/icons/real-estate.svg" alt="" /></figure>
+                <button class="button-secondary">Book Now</button>
+              </div>
+            </div>
+            <div class="card-container">
+              <h1 class="card-title">Family Law</h1>
+              <p class="card-p">Be aware of new developments, as laws and rules often change based on the situation.</p>
+              <hr class="card-hr" />
+              <div class="card-btn-container">
+                <figure><img src="/icons/family.svg" alt="" /></figure>
+                <button class="button-secondary">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-36" id="reviews">
+        <div class="flex flex-col gap-4 w-full justify-center items-center">
+          <h1 class="text-dark">Client Opinions & Reviews</h1>
+          <figure><img src="/images/line4.svg" alt="line" /></figure>
+        </div>
+        <div class="flex flex-col xl:grid grid-cols-4 gap-8 mt-24">
+          <div class="rev-container">
+            <div class="rev-card-container">
+              <figure><img src="/icons/apos.svg" alt="" /></figure>
+              <p class="text-xl leading-loose">
+                Could you please thank Paul personally for me, the stars are for his forehead. The perfect way of handling the case based on the
+                situation.
+              </p>
+            </div>
+            <div class="rev-person-container xl:flex">
+              <figure><img src="/images/male.png" alt="" /></figure>
+              <div>
+                <h2>John Doe</h2>
+                <p>Businnes Sector</p>
+              </div>
+            </div>
+          </div>
+          <div class="rev-container">
+            <div class="rev-person-container xl:flex hidden">
+              <figure><img src="/images/female.png" alt="" /></figure>
+              <div>
+                <h2>John Doe</h2>
+                <p>Businnes Sector</p>
+              </div>
+            </div>
+            <div class="rev-card-container2">
+              <figure><img src="/icons/" alt="" /></figure>
+              <p class="text-xl leading-loose">
+                Could you please thank Paul personally for me, the stars are for his forehead. The perfect way of handling the case based on the
+                situation.
+              </p>
+            </div>
+            <div class="rev-person-container xl:hidden flex">
+              <figure><img src="/images/female.png" alt="" /></figure>
+              <div>
+                <h2>John Doe</h2>
+                <p>Businnes Sector</p>
+              </div>
+            </div>
+          </div>
+          <div class="rev-container">
+            <div class="rev-card-container">
+              <figure><img src="/icons/apos.svg" alt="apos" /></figure>
+              <p class="text-xl leading-loose">
+                Could you please thank Paul personally for me, the stars are for his forehead. The perfect way of handling the case based on the
+                situation.
+              </p>
+            </div>
+            <div class="rev-person-container">
+              <figure><img src="/images/male.png" alt="apos" /></figure>
+              <div>
+                <h2>John Doe</h2>
+                <p>Businnes Sector</p>
+              </div>
+            </div>
+          </div>
+          <div class="rev-container">
+            <div class="rev-person-container hidden xl:flex">
+              <figure><img src="/images/female.png" alt="female" /></figure>
+              <div>
+                <h1>John Doe</h1>
+                <p>Businnes Sector</p>
+              </div>
+            </div>
+            <div class="rev-card-container2">
+              <figure><img src="/icons/apos.svg" alt="apos" /></figure>
+              <p class="text-xl leading-loose">
+                Could you please thank Paul personally for me, the stars are for his forehead. The perfect way of handling the case based on the
+                situation.
+              </p>
+            </div>
+            <div class="rev-person-container flex xl:hidden">
+              <figure><img src="/images/female.png" alt="female" /></figure>
+              <div>
+                <h2>John Doe</h2>
+                <p>Businnes Sector</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="accomplishments"
+        class="w-full p-6 md:p-16 sm:p-10 bg-cover bg-center bg-slate-500 bg-blend-luminosity"
+        style="background-image: linear-gradient(rgba(50, 50, 50, 0), rgba(50, 50, 50, 0)), url(/images/hammer.jpg)"
+      >
+        <div class="bg-primarybg bg-opacity-85 rounded-sm px-10 py-20 flex xl:flex-row flex-col xl:items-center justify-between">
+          <div class="flex flex-col gap-8 xl:pr-10">
+            <h1>We Are Top Lawyers And History</h1>
+            <figure>
+              <img src="/images/line1.svg" alt="line" class="sm:flex hidden" />
+              <img src="/images/line4.svg" class="sm:hidden flex m-auto" alt="line" />
+            </figure>
+            <div class="acc-container">
+              <h3>2000 – Establishment Of The Company!</h3>
+              <p>The origins of lawyers and the first founders of law make their appearance in Ancient Greece and Rome.</p>
+            </div>
+            <div class="acc-container">
+              <h3>2000 – Establishment Of The Company!</h3>
+              <p>The origins of lawyers and the first founders of law make their appearance in Ancient Greece and Rome.</p>
+            </div>
+            <div class="acc-container">
+              <h3>2000 – Establishment Of The Company!</h3>
+              <p>The origins of lawyers and the first founders of law make their appearance in Ancient Greece and Rome.</p>
+            </div>
+            <div class="acc-container">
+              <h3>2000 – Establishment Of The Company!</h3>
+              <p>The origins of lawyers and the first founders of law make their appearance in Ancient Greece and Rome.</p>
+            </div>
+          </div>
+          <div class="overflow-clip w-1/2 min-h-full self-stretch">
+            <img src="/images/scales.jpg" alt="scales" class="min-w-full min-h-full object-cover rounded-sm xl:flex hidden" />
+          </div>
+          <div class="xl:pl-10">
+            <h1 class="mb-4 xl:mt-0 mt-8">We Are Specialised And Experienced</h1>
+            <figure>
+              <img src="/images/line1.svg" alt="line" class="sm:flex hidden" />
+              <img src="/images/line4.svg" class="sm:hidden flex m-auto" alt="line" />
+            </figure>
+            <p class="mt-12">
+              Keep yourself up-to-date on your area of law. Be aware of new developments, as laws and rules often change based on the situation and
+              new cases are being decided every day.
+            </p>
+            <div class="w-full py-10">
+              <div class="stat-container">
+                <div class="stat-text-container">
+                  <p>Divorce And Family Cases</p>
+                  <span>75%</span>
+                </div>
+                <div class="stat-out-container">
+                  <div class="stat-in-container w-[75%]" />
+                </div>
+              </div>
+              <div class="stat-container">
+                <div class="stat-text-container">
+                  <p>Divorce And Family Cases</p>
+                  <span>90%</span>
+                </div>
+                <div class="stat-out-container">
+                  <div class="stat-in-container w-[90%]" />
+                </div>
+              </div>
+              <div class="stat-container">
+                <div class="stat-text-container">
+                  <p>Divorce And Family Cases</p>
+                  <span>83%</span>
+                </div>
+                <div class="stat-out-container">
+                  <div class="stat-in-container w-[83%]" />
+                </div>
+              </div>
+              <div class="stat-container">
+                <div class="stat-text-container">
+                  <p>Divorce And Family Cases</p>
+                  <span>94%</span>
+                </div>
+                <div class="stat-out-container">
+                  <div class="stat-in-container w-[94%]" />
+                </div>
+              </div>
+            </div>
+            <button class="button w-full sm:w-fit">Free Consulting</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20">
+        <div class="flex items-center justify-between pb-16 pt-6 sm:gap-6 gap-2">
+          <figure>
+            <img src="/images/line3.svg" alt="line" />
+          </figure>
+          <div class="flex justify-start items-center gap-3">
+            <figure>
+              <img src="/icons/logo.svg" alt="law-icon" class="w-36" />
+            </figure>
+            <h1 class="lg:flex hidden">Attorney</h1>
+          </div>
+          <figure>
+            <img src="/images/line2.svg" alt="" />
+          </figure>
+        </div>
+        <form method="POST" action="https://formspree.io/f/myyraqyg" class="flex flex-col gap-20 bg-dark rounded-sm p-6 py-10 sm:p-16 md:p-20">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-20">
+            <input type="text" name="name" required placeholder="Full Name.." />
+            <input type="tel" name="tel" required placeholder="Phone.." />
+          </div>
+          <div class="flex flex-col md:flex-row justify-between items-center gap-20">
+            <input type="email" name="email" required placeholder="Email.." />
+            <input type="text" name="subject" required placeholder="Subject.." />
+          </div>
+          <div class="mt-4">
+            <textarea rows="3" type="text" name="message" required placeholder="Your Message.."></textarea>
+          </div>
+          <input type="hidden" name="_captcha" value="false" />
+          <button type="submit" class="button bg-white sm:w-fit w-full m-auto">Get an appointment</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
