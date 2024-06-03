@@ -73,7 +73,7 @@ input:focus {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
-  padding: 24px 70px;
+  padding: 20px 70px;
   font-family: Outfit, sans-serif;
   font-size: 22px;
   font-weight: 500;
@@ -127,7 +127,8 @@ input:focus {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Cormorant Garamond", sans-serif;
 }
 
@@ -185,6 +186,18 @@ h2 {
   height: 100%;
 }
 
+.primary-button {
+  color: var(--white);
+  margin-top: 0;
+  margin-right: 0;
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+  padding: 24px 70px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 22px;
+  font-weight: 500;
+}
+
 @media screen and (max-width: 1536px) {
   .rev-container {
     display: flex;
@@ -235,29 +248,20 @@ h2 {
     flex-direction: column;
   }
 
-  .primary-button {
-    color: var(--white);
-    background-color: rgba(255, 255, 255, 0.1);
-    margin-top: 0;
-    margin-right: 0;
-    transition: border-color 0.2s, background-color 0.2s, color 0.2s;
-    padding: 24px 70px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 22px;
-    font-weight: 500;
-  }
-
   section {
     padding: 0 44px;
   }
   h1 {
-    font-size: 54px !important;
+    font-size: 2.5rem !important; /* 40px */
     font-weight: 700 !important;
   }
   h2 {
-    /* direction: rtl; */
-    font-size: 50px !important;
+    font-size: 2rem !important; /* 32px */
     font-weight: 600 !important;
+  }
+  h3 {
+    font-size: 1.75rem !important; /* 28px */
+    font-weight: 500;
   }
 
   p {
@@ -304,7 +308,7 @@ h2 {
   }
 
   .rev-card-container2 {
-    color: var(--paragraph-color);
+    color: var (--paragraph-color);
     border-radius: 40px 1px 1px 1px;
     gap: 2rem;
     display: flex;
@@ -312,56 +316,57 @@ h2 {
     background: none;
   }
   h1 {
-    font-size: 50px !important;
+    font-size: 2.25rem !important; /* 36px */
     font-weight: 700 !important;
   }
   h2 {
-    font-size: 46px !important;
+    font-size: 1.75rem !important; /* 28px */
     font-weight: 600 !important;
   }
+  h3 {
+    font-size: 1.5rem !important; /* 24px */
+    font-weight: 500;
+  }
 }
+
 @media screen and (max-width: 1024px) {
   h1 {
-    font-size: 46px !important;
+    font-size: 2rem !important; /* 32px */
     font-weight: 700 !important;
   }
   h2 {
-    font-size: 42px !important;
+    font-size: 1.5rem !important; /* 24px */
     font-weight: 600 !important;
   }
+  h3 {
+    font-size: 1.25rem !important; /* 20px */
+    font-weight: 500;
+  }
 }
+
 @media screen and (max-width: 768px) {
   .primary-button {
-    color: var(--white);
-    background-color: rgba(255, 255, 255, 0.1);
-    margin-top: 0;
-    margin-right: 0;
-    transition: border-color 0.2s, background-color 0.2s, color 0.2s;
     padding: 12px 40px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 18px;
-    font-weight: 500;
   }
   h1 {
-    font-size: 46px !important;
+    font-size: 1.75rem !important; /* 28px */
     font-weight: 700 !important;
   }
   h2 {
-    font-size: 42px !important;
+    font-size: 1.5rem !important; /* 24px */
     font-weight: 600 !important;
   }
+  h3 {
+    font-size: 1.25rem !important; /* 20px */
+    font-weight: 500;
+  }
 }
+
 @media screen and (max-width: 640px) {
   .primary-button {
-    color: var(--white);
-    background-color: rgba(255, 255, 255, 0.1);
-    margin-top: 0;
-    margin-right: 0;
-    transition: border-color 0.2s, background-color 0.2s, color 0.2s;
     padding: 8px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 14px;
-    font-weight: 500;
   }
   .rev-container {
     padding: 20px 10px;
@@ -380,17 +385,26 @@ h2 {
   .button {
     padding: 20px 30px;
   }
+  .primary-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+  }
   section {
     padding: 0 30px;
   }
   h1 {
-    font-size: 38px !important;
+    font-size: 1.5rem !important; /* 24px */
     font-weight: 700 !important;
     text-align: center !important;
   }
   h2 {
-    font-size: 34px !important;
+    font-size: 1.25rem !important; /* 20px */
     font-weight: 600 !important;
+  }
+  h3 {
+    font-size: 1rem !important; /* 16px */
+    font-weight: 500;
   }
   p {
     /* direction: rtl; */
