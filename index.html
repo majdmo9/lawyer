@@ -309,7 +309,7 @@
         class="w-full p-6 md:p-16 sm:p-10 bg-cover bg-center bg-slate-500 bg-blend-luminosity"
         style="background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(./images/hammer.jpg)"
       >
-        <div class="bg-primarybg bg-opacity-85 rounded-sm px-10 py-20 flex xl:flex-row flex-col xl:items-center justify-between">
+        <div class="bg-primarybg bg-opacity-85 rounded-sm px-4 py-10 lg:px-10 lg:py-20 flex xl:flex-row flex-col xl:items-center justify-between">
           <div class="flex flex-col gap-8 xl:pr-10">
             <h1>We Are Top Lawyers And History</h1>
             <figure>
@@ -404,21 +404,37 @@
             <img src="./images/line2.svg" alt="" />
           </figure>
         </div>
-        <form method="POST" action="https://formspree.io/f/myyraqyg" class="flex flex-col gap-20 bg-dark rounded-sm p-6 py-10 sm:p-16 md:p-20">
-          <div class="flex flex-col md:flex-row justify-between items-center gap-20">
-            <input type="text" name="name" required placeholder="Full Name.." />
-            <input type="tel" name="tel" required placeholder="Phone.." />
-          </div>
-          <div class="flex flex-col md:flex-row justify-between items-center gap-20">
-            <input type="email" name="email" required placeholder="Email.." />
-            <input type="text" name="subject" required placeholder="Subject.." />
-          </div>
-          <div class="mt-4">
-            <textarea rows="3" type="text" name="message" required placeholder="Your Message.."></textarea>
-          </div>
-          <input type="hidden" name="_captcha" value="false" />
-          <button type="submit" class="button bg-white sm:w-fit w-full m-auto">Get an appointment</button>
-        </form>
+        <div class="flex xl:flex-row lg:gap-2 gap-6 flex-col lg:items-center justify-between">
+          <form
+            method="POST"
+            action="https://formspree.io/f/myyraqyg"
+            class="flex flex-col gap-6 lg:gap-14 bg-dark rounded-sm p-4 py-10 sm:p-10 md:p-14"
+          >
+            <h1 class="text-center">Contact Us</h1>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 lg:gap-14">
+              <input type="text" name="name" required placeholder="Full Name.." />
+              <input type="tel" name="tel" required placeholder="Phone.." />
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 lg:gap-14">
+              <input type="email" name="email" required placeholder="Email.." />
+              <input type="text" name="subject" required placeholder="Subject.." />
+            </div>
+            <div class="lg:mt-4 mt-2">
+              <textarea rows="3" type="text" name="message" required placeholder="Your Message.."></textarea>
+            </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <button type="submit" class="button bg-white sm:w-fit w-full m-auto">Get an appointment</button>
+          </form>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.8578731910086!2d35.29123392448544!3d32.69333173897526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c4d0d9d3b9ccf%3A0xa3f61d8c282218c2!2sArab%20Israeli%20Bible%20Society!5e0!3m2!1siw!2sil!4v1717564890105!5m2!1siw!2sil"
+            style="border: 0"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="rounded-sm w-full max-w-xl self-center"
+          ></iframe>
+        </div>
       </section>
     </main>
   </body>
