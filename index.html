@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,7 +37,7 @@
   </head>
   <body class="min-h-screen w-full bg-primarybg">
     <main class="min-h-screen w-full m-auto relative">
-      <section class="w-full pt-4 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), #0000006e), url(./images/bg.png)">
+      <section class="w-full pt-4 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.8), #0000007b), url(./images/bg.png)">
         <div class="flex justify-between items-center w-full">
           <div class="flex justify-start items-center gap-3">
             <img src="./icons/logo.svg" alt="law-icon" class="sm:w-24 w-12" />
@@ -44,7 +45,7 @@
           </div>
           <button class="primary-button">Book A Consultation</button>
         </div>
-        <div class="flex justify-between items-center border border-t-1 border-b-1 border-r-0 border-l-0 border-[#4e555f] mt-4 py-8">
+        <div class="flex justify-between items-center border border-t-1 border-b-1 border-r-0 border-l-0 border-[#4e555f] mt-4 py-4 sm:py-8">
           <div class="xl:flex hidden">
             <div>
               <nav id="navbar-default" role="navigation" class="hidden xl:flex items-center gap-12 text-xl font-normal">
@@ -60,7 +61,7 @@
           <div class="flex sm:m-0">
             <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
               <div class="flex gap-2 items-center">
-                <figure class="border border-2 border-primarytxt rounded-[50%] p-5 hidden xl:flex">
+                <figure class="border-2 border-primarytxt rounded-[50%] p-5 hidden xl:flex">
                   <img
                     src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fa74b17528776cc2288b92_header-call-icon.svg"
                     loading="lazy"
@@ -68,12 +69,12 @@
                   />
                 </figure>
                 <div class="flex flex-col items-center sm:items-start justify-center">
-                  <p class="text-primarytxt font-medium text-2xl sm:text-xl">Call Us On:</p>
-                  <a href="tel:911-987654321" class="text-xl sm:text-2xl sm:hover:text-primarytxt transition-all whitespace-nowrap">911-987654321</a>
+                  <p class="text-primarytxt font-medium text-2xl sm:flex hidden sm:text-xl">Call Us On:</p>
+                  <a href="tel:911-987654321" class="text-xl sm:text-2xl sm:hover:text-primarytxt transition-all whitespace-nowrap">+972-987654321</a>
                 </div>
               </div>
-              <div class="flex gap-3 items-center">
-                <figure class="border border-2 border-primarytxt rounded-[50%] p-5 hidden xl:flex">
+              <div class="flex gap-0 sm:gap-3 items-center">
+                <figure class="border-2 border-primarytxt rounded-[50%] p-5 hidden xl:flex">
                   <img
                     src="https://assets-global.website-files.com/61fa5f4b4224e925032ca047/61fa74b16a6ce9cf010638ef_header-mail-icon.svg"
                     loading="lazy"
@@ -81,7 +82,7 @@
                   />
                 </figure>
                 <div class="flex flex-col items-center sm:items-start justify-center">
-                  <p class="text-primarytxt font-medium text-2xl sm:text-xl">Email Us On:</p>
+                  <p class="text-primarytxt font-medium text-2xl sm:flex hidden sm:text-xl">Email Us On:</p>
                   <a href="mailto:yourmail@mail.com" class="text-xl sm:text-2xl sm:hover:text-primarytxt transition-all">yourmail@mail.com</a>
                 </div>
               </div>
@@ -114,13 +115,13 @@
           </div>
         </div>
         <div class="flex items-center justify-center gap-6">
-          <div class="w-full flex flex-col gap-4 py-12 sm:pt-24 sm:pb-16">
+          <div class="w-full flex flex-col gap-4 py-8 sm:py-12 sm:pt-24 sm:pb-16">
             <figure class="flex items-center justify-center md:justify-start">
               <img src="./images/line1.svg" alt="line" class="md:flex hidden" />
               <img src="./images/line4.svg" alt="line" class="md:hidden flex" />
             </figure>
             <h1 class="tracking-wider leading-relaxed">Were Group Of Certified Law Professionals</h1>
-            <p class="text-primarytxt leading-8 tracking-wide">
+            <p class="text-primarytxt font-medium !text-lg leading-8 tracking-wide">
               we have helped countless maritime workers and their families go up against the largest offshore companies and win.
             </p>
             <button class="button w-full sm:w-fit">Get in touch</button>
@@ -404,11 +405,11 @@
             <img src="./images/line2.svg" alt="" />
           </figure>
         </div>
-        <div class="flex xl:flex-row lg:gap-2 gap-6 flex-col lg:items-center justify-between">
+        <div class="flex xl:flex-row lg:gap-4 gap-6 flex-col lg:items-center justify-center">
           <form
             method="POST"
             action="https://formspree.io/f/myyraqyg"
-            class="flex flex-col gap-6 lg:gap-14 bg-dark rounded-sm p-4 py-10 sm:p-10 md:p-14"
+            class="flex flex-col gap-6 lg:gap-14 bg-dark rounded-sm w-full p-4 py-10 sm:p-10 md:p-14"
           >
             <h1 class="text-center">Contact Us</h1>
             <div class="flex flex-col md:flex-row justify-between items-center gap-6 lg:gap-14">
